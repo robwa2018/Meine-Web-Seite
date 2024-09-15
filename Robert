@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stromkreissimulation</title>
+  <style>
+    .bulb {
+      width: 50px;
+      height: 50px;
+      background-color: gray;
+      border-radius: 50%;
+      margin: 20px auto;
+    }
+
+    .on {
+      background-color: yellow;
+    }
+
+    button {
+			
+            background-color: #007BFF;
+            color: yellow;
+            border: none;
+            padding: 30px 40px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+						
+    }
+  </style>
+</head>
+<body>
+  <div class="bulb" id="bulb"></div>
+  <button onclick="toggleLight()">Schalter umlegen</button>
+
+  <script>
+    let isOn = false;
+
+    function toggleLight() {
+      const bulb = document.getElementById('bulb');
+      isOn = !isOn;
+      bulb.className = isOn ? 'bulb on' : 'bulb';
+    }
+  </script>
+</body>
+</html>
